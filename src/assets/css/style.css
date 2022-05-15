@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap');
+
+
+@layer base {
+    body{
+        @apply font-RaleWay bg-white;
+    }
+    html, body, #root{ @apply h-full;}
+    .form-control{
+        @apply mt-1 block w-full px-3.5 py-3 bg-white bg-opacity-50 dark:bg-black border border-slate-300
+        rounded-md text-sm shadow-sm placeholder-slate-400
+        focus:outline-none focus:ring-1 focus:ring-white
+        disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none
+        invalid:border-white invalid:text-white focus:invalid:border-white focus:invalid:ring-white;
+    }
+    .primary-btn{
+        @apply bg-white dark:bg-black hover:bg-black hover:dark:bg-white border-2 px-6 py-3 text-sm leading-5 rounded-md text-black dark:text-white hover:text-white hover:dark:text-black;
+    }
+}
+
+@layer{
+    input.form-control:-webkit-autofill,
+    input.form-control:-webkit-autofill:hover,
+    input.form-control:-webkit-autofill:focus,
+    textarea.form-control:-webkit-autofill,
+    textarea.form-control:-webkit-autofill:hover,
+    textarea.form-control:-webkit-autofill:focus,
+    select.form-control:-webkit-autofill,
+    select.form-control:-webkit-autofill:hover,
+    select.form-control:-webkit-autofill:focus {
+        border: 1px solid #94a3b8;
+        -webkit-text-fill-color: #94a3b8;
+        -webkit-box-shadow: 0 0 0px 1000px #ffffff80 inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+    .dark input.form-control:-webkit-autofill,
+    .dark input.form-control:-webkit-autofill:hover,
+    .dark input.form-control:-webkit-autofill:focus,
+    .dark textarea.form-control:-webkit-autofill,
+    .dark textarea.form-control:-webkit-autofill:hover,
+    .dark textarea.form-control:-webkit-autofill:focus,
+    .dark select.form-control:-webkit-autofill,
+    .dark select.form-control:-webkit-autofill:hover,
+    .dark select.form-control:-webkit-autofill:focus {
+        border: 1px solid #94a3b8;
+        -webkit-text-fill-color: #94a3b8;
+        -webkit-box-shadow: 0 0 0px 1000px rgb(41,41, 41) inset;
+        transition: background-color 5000s ease-in-out 0s;
+    }
+}
