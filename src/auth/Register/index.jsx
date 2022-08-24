@@ -39,7 +39,7 @@ const Register = () => {
         }
         if(formData.cPassword === ''){
             errors.cPassword = 'Confirm password can not be blank.'
-        } else if (!(formData.cPassword == formData.password)){
+        } else if (!(formData.cPassword === formData.password)){
             errors.cPassword = 'Confirm password should be same as a password.'
         }else{
             errors.cPassword = ''
